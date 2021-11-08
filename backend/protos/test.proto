@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package test;
+option go_package = ".";
+
+service TestService {
+  rpc Add(Request) returns (Response);
+}
+
+message Request {
+  int32 a = 1;
+  int32 b = 2;
+}
+
+message Response {
+  int64 result = 1;
+}
